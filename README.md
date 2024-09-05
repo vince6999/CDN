@@ -26,6 +26,7 @@ curl -fsSL https://github.com/vince6999/CDN/raw/main/agent.sh -o agent.sh  && ch
 
 
 
+
 流程:
 
 vi /etc/hosts
