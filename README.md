@@ -18,20 +18,21 @@ master登录地址为: http://主控IP/
 
 v5.1.13主控
 
-curl -fsSL https://github.com/Steady-WJ/cdnfly-kaixin/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
+curl -fsSL https://github.com/vince6999/CDN/raw/main/master.sh -o master.sh && chmod +x master.sh && ./master.sh --es-dir /home/es
 
 v5.1.16被控
 
-curl -fsSL https://github.com/Steady-WJ/cdnfly-kaixin/raw/main/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.13 --master-ip  --es-ip  --es-pwd 
+curl -fsSL https://github.com/vince6999/CDN/raw/main/agent.sh -o agent.sh  && chmod +x agent.sh && ./agent.sh --master-ver v5.1.13 --master-ip  --es-ip  --es-pwd 
 
 
 
 流程:
+
 vi /etc/hosts
 
 
 #添加以下内容，记得替换为你自己搭建的IP 
-127.0.0.1 auth.cdnfly.cn monitor.cdnfly.cn
+0.0.0.0 auth.cdnfly.cn monitor.cdnfly.cn
 
 
 
