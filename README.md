@@ -1,8 +1,8 @@
-# cdnfly-kaixin
+# cdn-kaixin
 仅支持CENTOS7
 web目录为云端验证文件，请自行搭建
 
-wget https://raw.githubusercontent.com/Steady-WJ/cdnfly-kaixin/main/web/web.tar.gz
+wget https://raw.githubusercontent.com/vince6999/CDN/main/web/web.tar.gz
 
 tar -zxvf web.tar.gz
 
@@ -11,7 +11,7 @@ nano /etc/hosts
 
 0.0.0.0  auth.cdnfly.cn
 
-主控登录地址为: http://主控IP/
+master登录地址为: http://主控IP/
 管理员账号和密码： wenjian/wenjian
 普通用户账号和密码： ceshi/ceshi
 
@@ -26,3 +26,22 @@ curl -fsSL https://github.com/Steady-WJ/cdnfly-kaixin/raw/main/agent.sh -o agent
 
 
 
+流程:
+vi /etc/hosts
+
+
+#添加以下内容，记得替换为你自己搭建的IP 
+127.0.0.1 auth.cdnfly.cn monitor.cdnfly.cn
+
+
+
+然后ping 授权服务器域名查看是否正确
+ping auth.cdnfly.cn
+
+
+
+1.搭建授权端
+
+2.修改主master机器hosts文件，然后安装主控
+
+3.修改slave机器hosts文件，然后安装被控
